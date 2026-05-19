@@ -47,23 +47,23 @@ function Dashboard() {
       />
 
       {/* MAIN GRID */}
-      <main className="mx-auto mt-3 grid min-h-[calc(100vh-120px)] max-w-[1600px] grid-cols-1 gap-3 lg:grid-cols-12">
+      <main className="mx-auto mt-3 grid h-[calc(100vh-96px)] max-w-[1600px] grid-cols-1 gap-3 overflow-hidden lg:grid-cols-12">
 
         {/* LEFT COLUMN */}
-        <section className="flex min-h-0 flex-col gap-3 lg:col-span-3">
+        <section className="lg:col-span-3 flex h-full min-h-0 flex-col gap-3 overflow-hidden">
 
-          <div className="overflow-hidden rounded-3xl">
+          <div className="h-[45%] overflow-y-auto">
             <CalendarWidget />
           </div>
 
-          <div className="flex flex-1 overflow-hidden rounded-3xl">
+          <div className="flex-1 overflow-y-auto">
             <DeadlinesWidget />
           </div>
 
         </section>
 
         {/* CENTER COLUMN */}
-        <section className="flex min-h-0 flex-col gap-3 lg:col-span-6">
+        <section className="lg:col-span-6 flex h-full min-h-0 flex-col gap-3 overflow-hidden">
 
           <div className="overflow-hidden rounded-3xl">
             <FocusToday />
@@ -73,14 +73,14 @@ function Dashboard() {
             <QuoteWidget />
           </div>
 
-          <div className="flex flex-1 overflow-hidden rounded-3xl">
+          <div className="flex flex-1 overflow-hidden">
             <FocusTimer />
           </div>
 
         </section>
 
         {/* RIGHT COLUMN */}
-        <section className="flex min-h-0 flex-col gap-3 lg:col-span-3">
+        <section className="lg:col-span-3 flex h-full min-h-0 flex-col gap-3 overflow-hidden">
 
           <div className="overflow-hidden rounded-3xl">
             <WeatherWidget />
@@ -91,7 +91,7 @@ function Dashboard() {
           </div>
 
           <div className="flex min-h-[520px] flex-1 overflow-visible rounded-3xl">
-            <div className="w-full min-w-0 flex-1">
+            <div className="flex-1 overflow-y-auto">
               <TodoWidget />
             </div>
           </div>
